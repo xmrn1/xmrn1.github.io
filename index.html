@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+
+.thumbnail {
+  width: 129px;
+  height: 180px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.fadeInAnimated {
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* forwards (animation-fill-mode) retains the style from the last keyframe when the animation ends */
+}
+
+#second {
+  animation-delay: 1s;
+}
+
+#third {
+  animation-delay: 1s;
+}
+
+th, td, p, input {
+    font:14px Verdana;
+}
+table, th, td 
+{
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+th {
+    font-weight:bold;
+}
+
+
+</style>
+
+    <head>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+        <link rel="stylesheet" href="test.css">
+
+        <script src="generateplayer.js"></script>
+        <script>
+$(document).ready(function(){
+  $("sdraft").click(function(){
+    $("att1").fadeIn();
+  });
+});
+</script>
+    </head>
+
+
+
+    <body>
+    <br>
+    <h1>DREAM TEAM DRAFT</h1> <br>
+
+
+<div id="sdraft">
+         <button id="sdraft"   class="level"  value="start"   onclick="StartDraft()"> INIZIA DRAFT </button>
+</div>
+
+
+
+
+<div id="att1" class="fadeInAnimated"  style="display: none;">
+
+
+	<h3>Attaccante (1/1)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player1" onclick="storeplayer('1', 'player1'); displaynext('cen1', 'att1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player2" onclick="storeplayer('1', 'player2'); displaynext('cen1', 'att1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player3" onclick="storeplayer('1', 'player3'); displaynext('cen1', 'att1')"><br><br>
+</div>
+
+
+
+
+
+
+
+<div id="cen1" class="fadeInAnimated"  style="display: none;">
+
+
+	<h3>Centrocampista (1/2)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player4" onclick="storeplayer('2', 'player4'); displaynext('cen2', 'cen1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player5" onclick="storeplayer('2', 'player5'); displaynext('cen2', 'cen1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player6" onclick="storeplayer('2', 'player6'); displaynext('cen2', 'cen1')"><br><br>
+</div>
+
+<div id="cen2" class="fadeInAnimated"  style="display: none;">
+
+
+	<h3>Centrocampista (2/2)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player7" onclick="storeplayer('3', 'player7'); displaynext('dif1', 'cen2')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player8" onclick="storeplayer('3', 'player8'); displaynext('dif1', 'cen2')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player9" onclick="storeplayer('3', 'player9'); displaynext('dif1', 'cen2')"><br><br>
+</div>
+
+
+
+
+
+
+
+
+<div id="dif1" class="fadeInAnimated"  style="display: none;">
+
+
+	<h3>Difensore (1/3)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player10" onclick="storeplayer('4', 'player10'); displaynext('dif2', 'dif1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player11" onclick="storeplayer('4', 'player11'); displaynext('dif2', 'dif1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player12" onclick="storeplayer('4', 'player12'); displaynext('dif2', 'dif1')"><br><br>
+</div>
+
+<div id="dif2" class="fadeInAnimated"  style="display: none;">
+
+	<h3>Difensore (2/3)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player13" onclick="storeplayer('5', 'player13'); displaynext('dif3', 'dif2')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player14" onclick="storeplayer('5', 'player14'); displaynext('dif3', 'dif2')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player15" onclick="storeplayer('5', 'player15'); displaynext('dif3', 'dif2')"><br><br>
+</div>
+
+
+<div id="dif3" class="fadeInAnimated"  style="display: none;">
+
+	<h3>Difensore (3/3)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player16" onclick="storeplayer('6', 'player16'); displaynext('por1', 'dif3')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player17" onclick="storeplayer('6', 'player17'); displaynext('por1', 'dif3')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player18" onclick="storeplayer('6', 'player18'); displaynext('por1', 'dif3')"><br><br>
+</div>
+
+
+
+<div id="por1" class="fadeInAnimated"  style="display: none;">
+
+	<h3>Portiere (1/1)</h3>
+ 
+        <img src="images/spacer.gif" class="thumbnail" id="player19" onclick="storeplayer('7', 'player19'); displaynext('xxx', 'por1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player20" onclick="storeplayer('7', 'player20'); displaynext('xxx', 'por1')">
+
+
+        <img src="images/spacer.gif" class="thumbnail" id="player21" onclick="storeplayer('7', 'player21'); displaynext('xxx', 'por1')"><br><br>
+</div>
+
+
+<div id="xxx" class="fadeInAnimated"  style="display: none;">
+
+
+         <button id="reloadpage"   class="level"  value="start"   onclick="window.location.reload()"> RIPROVA </button>
+
+</div>
+
+
+<br>
+
+<div id="currentteam"  style="display: block;">
+    <h3>Squadra Attuale</h3>
+    <h4>OVR TOTALE: </h4> <div id="current_overall"  style="display: block;"> 0 </div>
+
+
+
+    <div id="currentteam_att">
+
+        <img src="cards/special/concept.png" class="thumbnail" id="1">
+
+        <br>
+</div>
+
+
+    <div id="currentteam_cen">
+
+        <img src="cards/special/concept.png" class="thumbnail" id="2">
+
+
+        <img src="cards/special/concept.png" class="thumbnail" id="3">
+
+
+
+        <br>
+</div>
+
+
+
+    <div id="currentteam_dif">
+
+        <img src="cards/special/concept.png" class="thumbnail" id="4">
+
+
+        <img src="cards/special/concept.png" class="thumbnail" id="5">
+
+
+        <img src="cards/special/concept.png" class="thumbnail" id="6">
+
+        <br>
+</div>
+
+
+    <div id="currentteam_por">
+
+        <img src="cards/special/concept.png" class="thumbnail" id="7">
+
+
+
+        <br>
+</div>
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+    </body>
+
+
+</html>
