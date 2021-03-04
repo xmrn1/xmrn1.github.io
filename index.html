@@ -4,6 +4,19 @@
 <style>
 
 
+    .img-with-text {
+    text-align: justify;
+    width: 129px;
+    display: inline;
+}
+
+
+hh1 {
+display: inline-block;
+  font-size: 10px;
+  text-align: center;
+}
+
 .thumbnail {
   width: 129px;
   height: 180px;
@@ -82,13 +95,24 @@ $(document).ready(function(){
 
     <h3>Attaccante (1/1)</h3>
  
-        <img src="images/spacer.gif" class="thumbnail" id="player1" onclick="storeplayer('1', 'player1'); displaynext('cen1', 'att1')">
 
+ <div id="img-with-text" class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player1" onclick="storeplayer('1', 'player1'); displaynext('cen1', 'att1')">
+<p id="playersmallname1">Some text</p>
+</div>
+
+<div class="img-with-text"   style="display: inline-block;">
 
         <img src="images/spacer.gif" class="thumbnail" id="player2" onclick="storeplayer('1', 'player2'); displaynext('cen1', 'att1')">
+<p id="playersmallname2">Some text</p>
+</div>
+
+<div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player3" onclick="storeplayer('1', 'player3'); displaynext('cen1', 'att1')">
+<p id="playersmallname3">Some text</p>
+</div>
 
 
-        <img src="images/spacer.gif" class="thumbnail" id="player3" onclick="storeplayer('1', 'player3'); displaynext('cen1', 'att1')"><br><br>
 </div>
 
 
@@ -102,27 +126,49 @@ $(document).ready(function(){
 
     <h3>Centrocampista (1/2)</h3>
  
+
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player4" onclick="storeplayer('2', 'player4'); displaynext('cen2', 'cen1')">
-
-
-        <img src="images/spacer.gif" class="thumbnail" id="player5" onclick="storeplayer('2', 'player5'); displaynext('cen2', 'cen1')">
-
-
-        <img src="images/spacer.gif" class="thumbnail" id="player6" onclick="storeplayer('2', 'player6'); displaynext('cen2', 'cen1')"><br><br>
+<p id="playersmallname4">Some text</p>
 </div>
+
+ <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player5" onclick="storeplayer('2', 'player5'); displaynext('cen2', 'cen1')">
+<p id="playersmallname5">Some text</p>
+</div>
+
+ <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player6" onclick="storeplayer('2', 'player6'); displaynext('cen2', 'cen1')">
+
+<p id="playersmallname6">Some text</p>
+</div>
+
+</div>
+
+
 
 <div id="cen2" class="fadeInAnimated"  style="display: none;">
 
 
     <h3>Centrocampista (2/2)</h3>
  
+
+   <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player7" onclick="storeplayer('3', 'player7'); displaynext('dif1', 'cen2')">
+<p id="playersmallname7">Some text</p>
+</div>
 
-
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player8" onclick="storeplayer('3', 'player8'); displaynext('dif1', 'cen2')">
+<p id="playersmallname8">Some text</p>
+</div>
+
+  <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player9" onclick="storeplayer('3', 'player9'); displaynext('dif1', 'cen2')">
+        <p id="playersmallname9">Some text</p>
+</div>
 
 
-        <img src="images/spacer.gif" class="thumbnail" id="player9" onclick="storeplayer('3', 'player9'); displaynext('dif1', 'cen2')"><br><br>
 </div>
 
 
@@ -137,26 +183,45 @@ $(document).ready(function(){
 
     <h3>Difensore (1/3)</h3>
  
+ <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player10" onclick="storeplayer('4', 'player10'); displaynext('dif2', 'dif1')">
-
-
-        <img src="images/spacer.gif" class="thumbnail" id="player11" onclick="storeplayer('4', 'player11'); displaynext('dif2', 'dif1')">
-
-
-        <img src="images/spacer.gif" class="thumbnail" id="player12" onclick="storeplayer('4', 'player12'); displaynext('dif2', 'dif1')"><br><br>
+<p id="playersmallname10">Some text</p>
 </div>
+
+<div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player11" onclick="storeplayer('4', 'player11'); displaynext('dif2', 'dif1')">
+<p id="playersmallname11">Some text</p>
+</div>
+
+<div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player12" onclick="storeplayer('4', 'player12'); displaynext('dif2', 'dif1')">
+
+<p id="playersmallname12">Some text</p>
+</div>
+</div>
+
 
 <div id="dif2" class="fadeInAnimated"  style="display: none;">
 
     <h3>Difensore (2/3)</h3>
  
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player13" onclick="storeplayer('5', 'player13'); displaynext('dif3', 'dif2')">
+<p id="playersmallname13">Some text</p>
+</div>
 
-
+ <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player14" onclick="storeplayer('5', 'player14'); displaynext('dif3', 'dif2')">
+<p id="playersmallname14">Some text</p>
+</div>
 
 
-        <img src="images/spacer.gif" class="thumbnail" id="player15" onclick="storeplayer('5', 'player15'); displaynext('dif3', 'dif2')"><br><br>
+  <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player15" onclick="storeplayer('5', 'player15'); displaynext('dif3', 'dif2')">
+<p id="playersmallname15">Some text</p>
+</div>
+
+
 </div>
 
 
@@ -164,13 +229,24 @@ $(document).ready(function(){
 
     <h3>Difensore (3/3)</h3>
  
+
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player16" onclick="storeplayer('6', 'player16'); displaynext('por1', 'dif3')">
+<p id="playersmallname16">Some text</p>
+</div>
 
 
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player17" onclick="storeplayer('6', 'player17'); displaynext('por1', 'dif3')">
+<p id="playersmallname17">Some text</p>
+</div>
 
 
-        <img src="images/spacer.gif" class="thumbnail" id="player18" onclick="storeplayer('6', 'player18'); displaynext('por1', 'dif3')"><br><br>
+  <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player18" onclick="storeplayer('6', 'player18'); displaynext('por1', 'dif3')">
+        <p id="playersmallname18">Some text</p>
+</div>
+
 </div>
 
 
@@ -179,13 +255,20 @@ $(document).ready(function(){
 
     <h3>Portiere (1/1)</h3>
  
+   <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player19" onclick="storeplayer('7', 'player19'); displaynext('xxx', 'por1')">
+<p id="playersmallname19">Some text</p>
+</div>
 
-
+  <div class="img-with-text"   style="display: inline-block;">
         <img src="images/spacer.gif" class="thumbnail" id="player20" onclick="storeplayer('7', 'player20'); displaynext('xxx', 'por1')">
+<p id="playersmallname20">Some text</p>
+</div>
 
-
-        <img src="images/spacer.gif" class="thumbnail" id="player21" onclick="storeplayer('7', 'player21'); displaynext('xxx', 'por1')"><br><br>
+  <div class="img-with-text"   style="display: inline-block;">
+        <img src="images/spacer.gif" class="thumbnail" id="player21" onclick="storeplayer('7', 'player21'); displaynext('xxx', 'por1')">
+        <p id="playersmallname21">Some text</p>
+</div>
 </div>
 
 
@@ -208,20 +291,25 @@ $(document).ready(function(){
 
     <div id="currentteam_att">
 
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="1">
-
+<p id="selectedplayersmallname1" >-</p>
+</div>
         <br>
 </div>
 
 
     <div id="currentteam_cen">
 
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="2">
+<p id="selectedplayersmallname2">-</p>
+</div>
 
-
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="3">
-
-
+<p id="selectedplayersmallname3">-</p>
+</div>
 
         <br>
 </div>
@@ -230,23 +318,33 @@ $(document).ready(function(){
 
     <div id="currentteam_dif">
 
+
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="4">
+<p id="selectedplayersmallname4">-</p>
+</div>
 
 
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="5">
+<p id="selectedplayersmallname5">-</p>
+</div>
 
 
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="6">
-
+<p id="selectedplayersmallname6">-</p>
+</div>
         <br>
 </div>
 
 
     <div id="currentteam_por">
 
+<div class="img-with-text"   style="display: inline-block;">
         <img src="cards/special/concept.png" class="thumbnail" id="7">
-
-
+<p id="selectedplayersmallname7">-</p>
+</div>
 
         <br>
 </div>
