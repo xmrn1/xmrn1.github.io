@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <style>
 
 
@@ -80,7 +80,7 @@ $(document).ready(function(){
 <div id="att1" class="fadeInAnimated"  style="display: none;">
 
 
-	<h3>Attaccante (1/1)</h3>
+    <h3>Attaccante (1/1)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player1" onclick="storeplayer('1', 'player1'); displaynext('cen1', 'att1')">
 
@@ -100,7 +100,7 @@ $(document).ready(function(){
 <div id="cen1" class="fadeInAnimated"  style="display: none;">
 
 
-	<h3>Centrocampista (1/2)</h3>
+    <h3>Centrocampista (1/2)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player4" onclick="storeplayer('2', 'player4'); displaynext('cen2', 'cen1')">
 
@@ -114,7 +114,7 @@ $(document).ready(function(){
 <div id="cen2" class="fadeInAnimated"  style="display: none;">
 
 
-	<h3>Centrocampista (2/2)</h3>
+    <h3>Centrocampista (2/2)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player7" onclick="storeplayer('3', 'player7'); displaynext('dif1', 'cen2')">
 
@@ -135,7 +135,7 @@ $(document).ready(function(){
 <div id="dif1" class="fadeInAnimated"  style="display: none;">
 
 
-	<h3>Difensore (1/3)</h3>
+    <h3>Difensore (1/3)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player10" onclick="storeplayer('4', 'player10'); displaynext('dif2', 'dif1')">
 
@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 <div id="dif2" class="fadeInAnimated"  style="display: none;">
 
-	<h3>Difensore (2/3)</h3>
+    <h3>Difensore (2/3)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player13" onclick="storeplayer('5', 'player13'); displaynext('dif3', 'dif2')">
 
@@ -162,7 +162,7 @@ $(document).ready(function(){
 
 <div id="dif3" class="fadeInAnimated"  style="display: none;">
 
-	<h3>Difensore (3/3)</h3>
+    <h3>Difensore (3/3)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player16" onclick="storeplayer('6', 'player16'); displaynext('por1', 'dif3')">
 
@@ -177,7 +177,7 @@ $(document).ready(function(){
 
 <div id="por1" class="fadeInAnimated"  style="display: none;">
 
-	<h3>Portiere (1/1)</h3>
+    <h3>Portiere (1/1)</h3>
  
         <img src="images/spacer.gif" class="thumbnail" id="player19" onclick="storeplayer('7', 'player19'); displaynext('xxx', 'por1')">
 
@@ -200,8 +200,9 @@ $(document).ready(function(){
 <br>
 
 <div id="currentteam"  style="display: block;">
-    <h3>Squadra Attuale</h3>
-    <h4>OVR TOTALE: </h4> <div id="current_overall"  style="display: block;"> 0 </div>
+
+
+    <h4>OVR TOTALE: </h4> <div id="current_overall"  style="display: inline;"> 0 </div><div id="max_overall"  style="display: inline;">/ 678</div>
 
 
 
@@ -252,7 +253,7 @@ $(document).ready(function(){
 
 
 
-	</div>
+    </div>
 
 
 
